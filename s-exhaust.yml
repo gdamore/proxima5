@@ -1,0 +1,92 @@
+# Copyright 2015 Garrett D'Amore
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use file except in compliance with the License.
+# You may obtain a copy of the license at
+#
+#    http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+name:     Exhaust
+width:    9
+height:   4
+originx:  4
+originy:  0
+layer:    2
+glyphs:
+    ".":
+        background:    color1
+        foreground:    color2
+        display:       "."
+
+    "O":
+        background:    color1
+        foreground:    color2
+        display:       "O"
+
+    "o":
+        background:    color1
+        foreground:    color2
+        display:       "o"
+
+    "@":
+        background:    color1
+        foreground:    color3
+        display:       "O"
+
+palette:
+    color1:  black
+    color2:  grey
+    color3:  darkgrey
+
+frames:
+    - names:    [ "LIFTOFF" ]
+      next:     "LIFTOFF1"
+      time:     70
+      data:
+        - "         "
+        - "         "
+        - "         "
+        - "  .   .  "
+
+    - names:    [ LIFTOFF1 ]
+      next:     "LIFTOFF2"
+      time:     120
+      data:
+        - "         "
+        - "         "
+        - "         "
+        - " o.   .o "
+
+    - names:    [ LIFTOFF2 ]
+      next:     "LIFTOFF3"
+      time:     150
+      data:
+        - "         "
+        - "         "
+        - "         "
+        - "Oo.   .oO"
+
+    - names:    [ LIFTOFF3 ]
+      next:     "LIFTOFF4"
+      time:     150
+      data:
+        - "         "
+        - "         "
+        - "         "
+        - "Oo     oO"
+
+    - names:    [ LIFTOFF4 ]
+      next:     ""
+      time:     150
+      data:
+        - "         "
+        - "         "
+        - "         "
+        - "O       O"

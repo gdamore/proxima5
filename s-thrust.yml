@@ -1,0 +1,223 @@
+# Copyright 2015 Garrett D'Amore
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use file except in compliance with the License.
+# You may obtain a copy of the license at
+#
+#    http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+name:     Thrust
+width:    5
+height:   6
+originx:  2
+originy:  0
+layer:    2
+glyphs:
+    "<":
+        background:    color1
+        foreground:    color2
+        display:       "˂"
+
+    ">":
+        background:    color1
+        foreground:    color2
+        display:       "˃"
+
+    "v":
+        background:    color1
+        foreground:    color2
+        display:       "˅"
+
+    "^":
+        background:    color1
+        foreground:    color2
+        display:       "˄"
+
+    "l":
+        background:    color1
+        foreground:    color3
+        display:       "˂"
+
+    "r":
+        background:    color1
+        foreground:    color3
+        display:       "˃"
+
+    "u":
+        background:    color1
+        foreground:    color3
+        display:       "˅"
+
+    "d":
+        background:    color1
+        foreground:    color3
+        display:       "˄"
+
+    "L":
+        background:    color1
+        foreground:    color4
+        display:       "˂"
+
+    "R":
+        background:    color1
+        foreground:    color4
+        display:       "˃"
+
+    "U":
+        background:    color1
+        foreground:    color4
+        display:       "˅"
+
+    "D":
+        background:    color1
+        foreground:    color4
+        display:       "˄"
+
+palette:
+    color1:  black
+    color2:  brightyellow
+    color3:  yellow
+    color4:  orange
+    color5:  red
+
+frames:
+    - names:    [ DOWN ]
+      next:     DOWN1
+      time:     150
+      data:
+        - " ^ ^ "
+        - "     "
+        - "     "
+        - "     "
+        - "     "
+        - "     "
+
+    - names:    [ RIGHT ]
+      next:     RIGHT1
+      time:     150
+      data:
+        - "     "
+        - "<    "
+        - "     "
+        - "<    "
+        - "     "
+        - "     "
+
+    - names:    [ LEFT ]
+      next:     LEFT1
+      time:     150
+      data:
+        - "     "
+        - "    >"
+        - "     "
+        - "    >"
+        - "     "
+        - "     "
+
+    - names:    [ UP ]
+      next:     UP1
+      time:     150
+      data:
+        - "     "
+        - "     "
+        - "     "
+        - "     "
+        - " v v "
+        - "  v  "
+
+    - names:    [ DOWN1 ]
+      next:     DOWN2
+      time:     250
+      data:
+        - " d d "
+        - "     "
+        - "     "
+        - "     "
+        - "     "
+        - "     "
+
+    - names:    [ RIGHT1 ]
+      next:     RIGHT2
+      time:     250
+      data:
+        - "     "
+        - "l    "
+        - "     "
+        - "l    "
+        - "     "
+        - "     "
+
+    - names:    [ LEFT1 ]
+      next:     LEFT2
+      time:     250
+      data:
+        - "     "
+        - "    r"
+        - "     "
+        - "    r"
+        - "     "
+        - "     "
+
+
+    - names:    [ UP1 ]
+      next:     UP2
+      time:     250
+      data:
+        - "     "
+        - "     "
+        - "     "
+        - "     "
+        - " u u "
+        - "  u  "
+
+    - names:    [ DOWN2 ]
+      next:     ""
+      time:     50
+      data:
+        - " D D "
+        - "     "
+        - "     "
+        - "     "
+        - "     "
+        - "     "
+
+    - names:    [ RIGHT2 ]
+      next:     ""
+      time:     70
+      data:
+        - "     "
+        - "L    "
+        - "     "
+        - "L    "
+        - "     "
+        - "     "
+
+    - names:    [ LEFT2 ]
+      next:     ""
+      time:     70
+      data:
+        - "     "
+        - "    R"
+        - "     "
+        - "    R"
+        - "     "
+        - "     "
+
+
+    - names:    [ UP2 ]
+      next:     ""
+      time:     70
+      data:
+        - "     "
+        - "     "
+        - "     "
+        - "     "
+        - " U U "
+        - "  U  "

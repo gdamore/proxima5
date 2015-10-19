@@ -1,0 +1,171 @@
+# Copyright 2015 Garrett D'Amore
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use file except in compliance with the License.
+# You may obtain a copy of the license at
+#
+#    http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+# Thanks to Luis Zuno for dedicating his explosions pack to the
+# public domain.  Those were PNGs, and not used precisely identically,
+# but his work inspired this.
+
+name:     Explosion
+width:    29
+height:   13
+originx:  14
+originy:  6
+layer:    7
+glyphs:
+    A:
+        background:    brightyellow
+        foreground:    brightyellow
+        display:       "░"
+
+    B:
+        background:    yellow
+        foreground:    brightyellow
+        display:       "░"
+
+    C:
+        background:    orange
+        foreground:    red
+        display:       "░"
+    D:
+        background:    orange
+        foreground:    red
+        display:       "█"
+
+frames:
+    - names:    [ F1 ]
+      next:     F2
+      time:     70
+      data:
+        - "                             "
+        - "                             "
+        - "                             "
+        - "            AAAAA            "
+        - "         AAAAAAAAAAA         "
+        - "        AAAAAAAAAAAAA        "
+        - "        AAAAAAAAAAAAA        "
+        - "         AAAAAAAAAAA         "
+        - "            AAAAA            "
+        - "                             "
+        - "                             "
+        - "                             "
+        - "                             "
+
+    - names:    [ F2 ]
+      next:     F3
+      time:     70
+      data:
+        - "                             "
+        - "                             "
+        - "          AAAAAAAAA          "
+        - "       AAAAAAAAAAAAAAA       "
+        - "     AAAAAAAAAAAAAAAAAAA     "
+        - "    AAAAAAAAAAAAAAAAAAAAA    "
+        - "    AAAAAAAAAAAAAAAAAAAAA    "
+        - "    AAAAAAAAAAAAAAAAAAAAA    "
+        - "     AAAAAAAAAAAAAAAAAAA     "
+        - "       AAAAAAAAAAAAAAA       "
+        - "          AAAAAAAAA          "
+        - "                             "
+        - "                             "
+
+    - names:    [ F3 ]
+      next:     F4
+      time:     70
+      data:
+        - "         BBBBBBBBBBB         "
+        - "     BBBBBBBBBBBBBBBBBBB     "
+        - "  BBBBBBBBBBBBBBBBBBBBBBBBB  "
+        - " BBBBBBBBBBBBBBBBBBBBBBBBBBB "
+        - "BBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+        - "BBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+        - "BBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+        - "BBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+        - "BBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+        - " BBBBBBBBBBBBBBBBBBBBBBBBBBB "
+        - "  BBBBBBBBBBBBBBBBBBBBBBBBB  "
+        - "     BBBBBBBBBBBBBBBBBBB     "
+        - "         BBBBBBBBBBB         "
+
+    - names:    [ F4 ]
+      next:     F5
+      time:     100
+      data:
+        - "         DDDDDDDDDDD         "
+        - "     DDDDDDCCCCCCCCDDDDD     "
+        - "  DDDDDDDCCCCCCCCCCCCCCDDDD  "
+        - " DDDDDCCCCCCCCCCCCCCCCCCCCDD "
+        - "DDDDCCCCCCCCCCCCCCCCCCCCCCCCC"
+        - "DDDCCCCCCCCCCCCC          CCC"
+        - "DDCCCCCCCCCCC               C"
+        - "DDCCCCCCCCC                  "
+        - "DDCCCCCCCC                   "
+        - " DCCCCCCCC                   "
+        - "  DCCCCCCC                   "
+        - "     CCCCCC                  "
+        - "         CCC                 "
+
+    - names:    [ F5 ]
+      next:     "F6"
+      time:     110
+      data:
+        - "         DDDDDDDDDDD         "
+        - "     DDDDD         DD DD     "
+        - "  DDDD                   DD  "
+        - " DD                        D "
+        - "DD                           "
+        - "DD                           "
+        - "DD                           "
+        - "DD                           "
+        - "DD                           "
+        - " D                           "
+        - "  DD                         "
+        - "     D D                     "
+        - "         DDD                 "
+
+    - names:    [ F6 ]
+      next:     "F7"
+      time:     120
+      data:
+        - "         DDDDDDDDDDD         "
+        - "     DDDD             D      "
+        - "  DDD                    D   "
+        - " D                           "
+        - "D                            "
+        - "D                            "
+        - "D                            "
+        - "D                            "
+        - "D                            "
+        - " D                           "
+        - "  D                          "
+        - "                             "
+        - "                             "
+
+    - names:    [ F7 ]
+      next:     ""
+      time:     120
+      data:
+        - "         DDDD   DD D         "
+        - "     DDD              D      "
+        - "  D D                        "
+        - " D                           "
+        - "D                            "
+        - "D                            "
+        - "                             "
+        - "                             "
+        - "                             "
+        - "                             "
+        - "                             "
+        - "                             "
+        - "                             "

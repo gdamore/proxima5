@@ -1,0 +1,91 @@
+# Copyright 2015 Garrett D'Amore
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use file except in compliance with the License.
+# You may obtain a copy of the license at
+#
+#    http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+name:     HFence
+width:    2
+height:   1
+layer:    2
+palette:
+     color1:  black
+     color2:  grey
+     color3:  blue
+     color4:  brightblue
+glyphs:
+    "L":
+        background:    color1
+        foreground:    color2
+        display:       "{"
+
+    "R":
+        background:    color1
+        foreground:    color2
+        display:       "}"
+    "X":
+        background:    color1
+        foreground:    color2
+        display:       "X"
+
+    "z":
+        background:    color1
+        foreground:    color3
+        display:       "~"
+    "Z":
+        background:    color1
+        foreground:    color4
+        display:       "═"
+
+frames:
+    - names:    [ LL ]
+      next:     ""
+      data:
+        - "LL"
+
+    - names:    [ LX ]
+      next:     ""
+      data:
+        - "LX"
+
+    - names:    [ RR ]
+      next:     ""
+      data:
+        - "RR"
+
+    - names:    [ RX ]
+      next:     ""
+      data:
+        - "XR"
+
+    - names:    [ OFF ]
+      next:     ON
+      time:     4000
+      data:
+        - "  "
+
+    - names:    [ ON ]
+      next:     ON1
+      time:     500
+      data:
+        - "zz"
+
+    - names:    [ ON1 ]
+      next:     ON2
+      time:     1000
+      data:
+        - "ZZ"
+
+    - names:    [ ON2 ]
+      next:     OFF
+      time:     500
+      data:
+        - "zz"

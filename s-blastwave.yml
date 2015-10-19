@@ -1,0 +1,67 @@
+# Copyright 2015 Garrett D'Amore
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use file except in compliance with the License.
+# You may obtain a copy of the license at
+#
+#    http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+name:     Blastwave
+width:    1
+height:   1
+layer:    8
+glyphs:
+    1:
+        background:    color1
+        foreground:    color1
+        display:       " "
+
+    2:
+        background:    color2
+        foreground:    color2
+        display:       " "
+
+    3:
+        background:    color3
+        foreground:    color3
+        display:       " "
+
+    4:
+        background:    color2
+        foreground:    color2
+        display:       " "
+
+palette:
+    color1: brightyellow
+    color2: yellow
+    color3: orange
+    color4: red
+
+frames:
+    - names:    [ F1 ]
+      next:     F2
+      time:     50
+      data:    [ "1" ]
+
+    - names:   [ F2 ]
+      next:     F3
+      time:     50
+      data:    [ "2" ]
+
+    - names:   [ F3 ]
+      next:     F4
+      time:     700
+      data:    [ "3" ]
+
+    - names:   [ F4 ]
+      next:     F3
+      time:     700
+      data:    [ "4" ]
+

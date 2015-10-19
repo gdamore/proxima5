@@ -1,0 +1,74 @@
+# Copyright 2015 Garrett D'Amore
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use file except in compliance with the License.
+# You may obtain a copy of the license at
+#
+#    http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+name:     LevelComplete
+width:    33
+height:   1
+originx:  16
+originy:  1
+layer:    9
+glyphs:
+    "L":
+        background:    color1
+        foreground:    color2
+        display:       "L"
+
+    "V":
+        background:    color1
+        foreground:    color2
+        display:       "V"
+
+    "E":
+        background:    color1
+        foreground:    color2
+        display:       "E"
+
+    "C":
+        background:    color1
+        foreground:    color2
+        display:       "C"
+
+    "O":
+        background:    color1
+        foreground:    color2
+        display:       "O"
+
+    "P":
+        background:    color1
+        foreground:    color2
+        display:       "P"
+
+    "M":
+        background:    color1
+        foreground:    color2
+        display:       "M"
+
+    "T":
+        background:    color1
+        foreground:    color2
+        display:       "T"
+
+    "_":
+        background:    color1
+        foreground:    color2
+        display:       " "
+
+palette:
+    color1:  green
+    color2:  white
+
+frames:
+    - names:    [ F0 ]
+      data:     [ "___L_E_V_E_L___C_O_M_P_L_E_T_E___" ]

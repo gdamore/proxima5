@@ -1,0 +1,103 @@
+# Copyright 2015 Garrett D'Amore
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use file except in compliance with the License.
+# You may obtain a copy of the license at
+#
+#    http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+#
+# Level Map, starting in the cavern.
+#
+name:     level1
+properties:
+    title:    Level One
+    timer:    90
+    gravity:  1.0
+    wind:     0.0
+    width:    320
+    height:   220
+
+objects:
+    terrain:
+       class:  terrain
+       sprite: Cavern1
+
+    player:
+       class:  ship
+       x:      "138"
+       y:      "215"
+
+    pad:
+       class:  pad
+       x:      138
+       y:      219
+
+    gantry:
+       class:  gantry
+       x:      128
+       y:      212
+
+    pad2:
+       class:  pad
+       x:      231
+       y:      91
+
+    A1:
+       class:  alien1
+       x:      169
+       y:      16
+       vx:     20
+
+    A2:
+       class:  alien1
+       x:      169
+       y:      12
+       vx:     -10
+
+    A3:
+       class:  alien1
+       x:      10
+       y:      180
+       vx:     14
+
+    A4:
+       class:  alien1
+       x:      186
+       y:      186
+       vx:     16
+
+    A5:
+       class:  alien1
+       x:      290
+       y:      94
+       vx:     24
+
+    F1:
+       class:  hfence
+       x:      236
+       y:      93
+       width:  21
+       height: 2
+
+    F2:
+       class:  hfence
+       x:      204
+       y:      210
+       width:  40
+       height: 2
+
+    F3:
+       class:  hfence
+       x:      108
+       y:      148
+       width:  40
+       height: 4
+

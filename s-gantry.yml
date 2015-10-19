@@ -1,0 +1,150 @@
+# Copyright 2015 Garrett D'Amore
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use file except in compliance with the License.
+# You may obtain a copy of the license at
+#
+#    http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+name:     Gantry
+width:    10
+height:   8
+layer:    3
+glyphs:
+    "@":
+        background:    black
+        foreground:    red
+        display:       "•"
+
+    "a":
+        background:    black
+        foreground:    yellow
+        display:       "o"
+    "o":
+        background:    black
+        foreground:    green
+        display:       "•"
+
+    "O":
+        background:    black
+        foreground:    brightgreen
+        display:       "o"
+
+    "X":
+        background:    black
+        foreground:    grey
+        display:       "Ж"
+
+    "/":
+        background:    black
+        foreground:    grey
+        display:       "/"
+    "R":
+        background:    black
+        foreground:    grey
+        display:       "\\"
+    "_":
+        background:    black
+        foreground:    grey
+        display:       "_"
+    "|":
+        background:    black
+        foreground:    grey
+        display:       "│"
+    "H":
+        background:    black
+        foreground:    grey
+        display:       "░"
+    "q":
+        background:    black
+        foreground:    darkgrey
+        display:       "o"
+    "Q":
+        background:    black
+        foreground:    darkgrey
+        display:       "O"
+
+frames:
+    - names:    [ F1, START ]
+      next:     F2
+      time:     500
+      data:
+        - "          "
+        - "   @      "
+        - "  _|______"
+        - "  |X|     "
+        - "  |H|     "
+        - "  |X|__   "
+        - "/H|H|R    "
+        - "qQqQqQ    "
+
+    - names:    [ F2 ]
+      next:     F1
+      time:     500
+      data:
+        - "          "
+        - "   a      "
+        - "  _|______"
+        - "  |X|     "
+        - "  |H|     "
+        - "  |X|__   "
+        - "/H|H|R    "
+        - "qQqQqQ    "
+
+    - names:    [ F3, RETRACT ]
+      next:     F4
+      time:     100
+      data:
+        - "          "
+        - "   o      "
+        - "  _|______"
+        - "  |X|     "
+        - "  |H|     "
+        - "  |X|__   "
+        - "/H|H|R    "
+        - "qQqQqQ    "
+
+    - names:    [ F4 ]
+      next:     F5
+      time:     400
+      data:
+        - "       /  "
+        - "   o  /   "
+        - "  _|_/    "
+        - "  |X|     "
+        - "  |H| /   "
+        - "  |X|/    "
+        - "/H|H|R    "
+        - "qQqQqQ    "
+
+    - names:    [ F5 ]
+      next:     F6
+      time:     500
+      data:
+        - "     |    "
+        - "   O |    "
+        - "  _|_|    "
+        - "  |X|     "
+        - "  |H||    "
+        - "  |X|     "
+        - "/H|H|R    "
+        - "qQqQqQ    "
+
+    - names:    [ F6 ]
+      next:     F5
+      time:     500
+      data:
+        - "     |    "
+        - "   o |    "
+        - "  _|_|    "
+        - "  |X|     "
+        - "  |H||    "
+        - "  |X|     "
+        - "/H|H|R    "
+        - "qQqQqQ    "

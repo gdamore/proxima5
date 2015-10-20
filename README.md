@@ -11,6 +11,20 @@ To build it:  ./rebuild.sh
 THIS GAME IS A WORK IN PROGRESS; PROBABLY OF LITTLE ACTUAL PLAYABLE VALUE
 OTHER THAN AS A NOVELTY.
 
+
+GAME PLAY VIDEO
+---------------
+
+If you just want to see gameplay videos, check these out:
+
+
+ * [Video 2, xterm-256color] https://www.youtube.com/watch?v=jNxKTCmY_bQ
+ * [Video 1, Legacy Terminals](https://www.youtube.com/watch?v=DiOPBBM7-Xc)
+
+
+More Info
+---------
+
 Only a single game level is implemented so far.
 
 I built this intending to show off the capabilities of my Tcell package for
@@ -35,7 +49,26 @@ tested anything other than local connections; there are a lot of display
 updates in the game, so you do want to have a reasonably fast display.
 You can reduce the screen size if its too slow, that may help a little.
 
+Yes, it should run in Windows too.
+
+There is no sound (yet!)
+
 Much of the code here will probably get cleaned up and structured properly
 for reuse in nice library form.  Probably sub-packages under Tcell, for both
 the dynamic views and probably also the sprite management code and maybe even
 the full game loop.
+
+
+Reusing Code & Assets
+---------------------
+
+If you want to reuse any of the code or assets here, feel free, per the
+terms of the Apache 2 license.  I would however appreciate an email
+letting me know how you're using this stuff -- I'm really hopeful that
+this work will inspire new creative efforts by others and I'm anxious
+to see what you create!
+
+There are no special requirements to do so, but if you do use this code,
+I'd appreciate a mention somewhere in your project, with a link back to
+this github repo.
+

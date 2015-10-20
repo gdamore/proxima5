@@ -18,7 +18,7 @@ GAME PLAY VIDEO
 If you just want to see gameplay videos, check these out:
 
 
- * [Video 2, xterm-256color] https://www.youtube.com/watch?v=jNxKTCmY_bQ
+ * [Video 2, xterm-256color](https://www.youtube.com/watch?v=jNxKTCmY_bQ)
  * [Video 1, Legacy Terminals](https://www.youtube.com/watch?v=DiOPBBM7-Xc)
 
 

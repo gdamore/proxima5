@@ -15,8 +15,10 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 	"log"
+	"io/ioutil"
 	"math/rand"
 	"os"
 	"time"
@@ -31,9 +33,18 @@ const Version = "0.1"
 
 func main() {
 
+	var logfile string
+
+	flag.StringVar(&logfile, "log", logfile, "Log file for debugging log")
+	flag.Parse()
+
 	rand.Seed(time.Now().UnixNano())
-	if f, e := os.Create("/tmp/gamelog"); e == nil {
-		log.SetOutput(f)
+	if logfile != "" {
+		if f, e := os.Create(logfile); e == nil {
+			log.SetOutput(f)
+		}
+	} else {
+		log.SetOutput(ioutil.Discard)
 	}
 	game := &Game{}
 	if err := game.Init(); err != nil {

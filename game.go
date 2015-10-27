@@ -99,14 +99,14 @@ func (g *Game) Quit() {
 func (g *Game) Draw() {
 	g.Lock()
 	sbnorm := tcell.StyleDefault.
-		Background(tcell.ColorBrightCyan).
+		Background(tcell.ColorAqua).
 		Foreground(tcell.ColorBlack)
 	sbwarn := tcell.StyleDefault.
-		Background(tcell.ColorBrightCyan).
+		Background(tcell.ColorAqua).
 		Foreground(tcell.ColorRed)
 	sbalert := tcell.StyleDefault.
 		Background(tcell.ColorRed).
-		Foreground(tcell.ColorBrightWhite)
+		Foreground(tcell.ColorWhite)
 
 	g.sbar.SetStyle(sbnorm)
 	timer := g.level.GetTimer()

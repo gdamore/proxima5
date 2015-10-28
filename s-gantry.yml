@@ -19,56 +19,63 @@ layer:    3
 glyphs:
     "@":
         background:    black
-        foreground:    red
+        foreground:    holdoff
         display:       "•"
 
     "a":
         background:    black
-        foreground:    yellow
+        foreground:    holdon
         display:       "o"
     "o":
         background:    black
-        foreground:    green
+        foreground:    gooff
         display:       "•"
 
     "O":
         background:    black
-        foreground:    brightgreen
+        foreground:    goon
         display:       "o"
 
     "X":
         background:    black
-        foreground:    grey
+        foreground:    gantry
         display:       "Ж"
 
     "/":
         background:    black
-        foreground:    grey
+        foreground:    gantry
         display:       "/"
     "R":
         background:    black
-        foreground:    grey
+        foreground:    gantry
         display:       "\\"
     "_":
         background:    black
-        foreground:    grey
+        foreground:    gantry
         display:       "_"
     "|":
         background:    black
-        foreground:    grey
+        foreground:    gantry
         display:       "│"
     "H":
         background:    black
-        foreground:    grey
+        foreground:    gantry
         display:       "░"
     "q":
         background:    black
-        foreground:    darkgrey
+        foreground:    tires
         display:       "o"
     "Q":
         background:    black
-        foreground:    darkgrey
+        foreground:    tires
         display:       "O"
+palette:
+    holdon:  yellow
+    holdoff: red
+    goon:    lime
+    gooff:   green
+    gantry:  lightsteelblue
+    tires:   dimgray
 
 frames:
     - names:    [ F1, START ]

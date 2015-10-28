@@ -240,8 +240,8 @@ palette:
     color1:  black
     color2:  red
     color3:  blue
-    color4:  green
-    color5:  magenta
+    color4:  lime
+    color5:  fuchsia
     color6:  white
 
 frames:

@@ -27,7 +27,7 @@ glyphs:
 
     "O":
         background:    color1
-        foreground:    color2
+        foreground:    color3
         display:       "O"
 
     "o":
@@ -37,13 +37,14 @@ glyphs:
 
     "@":
         background:    color1
-        foreground:    color3
+        foreground:    color4
         display:       "O"
 
 palette:
     color1:  black
-    color2:  grey
-    color3:  darkgrey
+    color2:  silver
+    color3:  lightslategrey
+    color4:  gray
 
 frames:
     - names:    [ "LIFTOFF" ]

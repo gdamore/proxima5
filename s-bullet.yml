@@ -26,15 +26,15 @@ layer:    4
 glyphs:
     V:
         background:    black
-        foreground:    color1
+        foreground:    bullet
         display:       ":"
 
     H:
         background:    black
-        foreground:    color1
+        foreground:    bullet
         display:       "-"
 palette:
-    color1: magenta
+    bullet: fuchsia
 
 frames:
     - names:    [ "V" ]

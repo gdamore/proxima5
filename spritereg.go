@@ -75,12 +75,13 @@ func GetSprite(name string) *Sprite {
 		if cn, ok := data.Palette[bn]; ok {
 			bn = cn
 		}
-		if fg, ok := GameColors[fn]; ok {
-			st = st.Foreground(fg)
-		}
-		if bg, ok := GameColors[bn]; ok {
-			st = st.Background(bg)
-		}
+
+		fg := tcell.GetColor(fn)
+		st = st.Foreground(fg)
+
+		bg := tcell.GetColor(bn)
+		st = st.Background(bg)
+
 		glyphs[k[0]] = []rune(g.Display)[0]
 		styles[k[0]] = st
 	}

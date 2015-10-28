@@ -39,8 +39,8 @@ glyphs:
         display:       " "
 
 palette:
-    color1: brightyellow
-    color2: yellow
+    color1: yellow
+    color2: gold
     color3: orange
     color4: red
 

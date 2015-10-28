@@ -18,9 +18,9 @@ height:   1
 layer:    2
 palette:
      color1:  black
-     color2:  grey
-     color3:  blue
-     color4:  brightblue
+     color2:  gray
+     color3:  dodgerblue
+     color4:  blue
 glyphs:
     "L":
         background:    color1

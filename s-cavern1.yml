@@ -23,39 +23,47 @@ height:   220
 layer:    4
 glyphs:
     "#":
-        background:    green
-        foreground:    brown
+        background:    dirt
+        foreground:    moss
         display:       "░"
 
     "_":
         background:    black
-        foreground:    green
+        foreground:    grass
         display:       "_"
 
     "x":
         background:    black
-        foreground:    brown
+        foreground:    dirt
         display:       "▛"
 
     "z":
         background:    black
-        foreground:    brown
+        foreground:    dirt
         display:       "▜"
 
     "y":
         background:    black
-        foreground:    brown
+        foreground:    dirt
         display:       "▙"
 
     "v":
         background:    black
-        foreground:    brown
+        foreground:    dirt
         display:       "▟"
 
     "~":
-        background:    blue
-        foreground:    cyan
+        background:    water
+        foreground:    waves
         display:       "~"
+
+palette:
+   dirt: tan
+   grass: lime
+   moss:  green
+   rock:  grey
+   water: blue
+   waves: aqua
 
 frames:
     - names:    [ TERRAIN ]

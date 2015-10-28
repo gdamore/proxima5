@@ -25,13 +25,13 @@ originy:  6
 layer:    7
 glyphs:
     A:
-        background:    brightyellow
-        foreground:    brightyellow
+        background:    yellow
+        foreground:    yellow
         display:       "░"
 
     B:
-        background:    yellow
-        foreground:    brightyellow
+        background:    gold
+        foreground:    yellow
         display:       "░"
 
     C:

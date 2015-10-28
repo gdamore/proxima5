@@ -22,38 +22,43 @@ layer:    6
 glyphs:
     "A":
         background:    black
-        foreground:    grey
+        foreground:    body
         display:       "Ѧ"
 
     "E":
-        background:    grey
-        foreground:    red
+        background:    body
+        foreground:    marking
         display:       "Ξ"
 
     "M":
-        background:    grey
-        foreground:    red
+        background:    body
+        foreground:    marking
         display:       "Ж"
 
     "d":
         background:    black
-        foreground:    grey
+        foreground:    body
         display:       "▗"
 
     "b":
         background:    black
-        foreground:    grey
+        foreground:    body
         display:       "▖"
 
     "v":
         background:    black
-        foreground:    darkgrey
+        foreground:    dark
         display:       "Ѧ"
 
     "u":
         background:    black
-        foreground:    lightgrey
+        foreground:    bright
         display:       "Ѧ"
+palette:
+    bright:  gainsboro
+    dark:    darkgrey
+    body:    silver
+    marking: red
 
 frames:
     - names:    [ UP, FWD ]

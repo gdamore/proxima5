@@ -32,7 +32,7 @@ glyphs:
 
     P:
         background:    black
-        foreground:    darkgrey
+        foreground:    gray
         display:       "░"
 
 frames:

@@ -82,10 +82,10 @@ glyphs:
 
 palette:
     color1:  black
-    color2:  brightyellow
-    color3:  yellow
-    color4:  orange
-    color5:  red
+    color2:  yellow
+    color3:  orange
+    color4:  red
+    color5:  firebrick
 
 frames:
     - names:    [ DOWN ]

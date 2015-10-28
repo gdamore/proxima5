@@ -92,7 +92,7 @@ glyphs:
 
 palette:
     color1:  black
-    color2:  magenta
+    color2:  fuchsia
 
 frames:
     - names:    [ F0 ]

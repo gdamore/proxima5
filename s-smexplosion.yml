@@ -20,13 +20,13 @@ originx:  5
 originy:  2
 glyphs:
     A:
-        background:    brightyellow
-        foreground:    brightyellow
+        background:    yellow
+        foreground:    yellow
         display:       "░"
 
     B:
-        background:    yellow
-        foreground:    brightyellow
+        background:    orange
+        foreground:    yellow
         display:       "░"
 
     C:

@@ -44,8 +44,6 @@ type Game struct {
 	sync.Mutex
 }
 
-var GameColors map[string]tcell.Color
-
 func (g *Game) Init() error {
 	g.lives = 5
 	if screen, err := tcell.NewScreen(); err != nil {
@@ -53,11 +51,6 @@ func (g *Game) Init() error {
 	} else if err = screen.Init(); err != nil {
 		return err
 	} else {
-		if screen.Colors() >= 256 {
-			GameColors = Colors256
-		} else {
-			GameColors = Colors16
-		}
 		screen.SetStyle(tcell.StyleDefault.
 			Background(tcell.ColorBlack).
 			Foreground(tcell.ColorWhite))

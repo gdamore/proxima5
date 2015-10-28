@@ -19,50 +19,56 @@ layer:    3
 glyphs:
     "_":
         background:    black
-        foreground:    brightgreen
+        foreground:    skin
         display:       "_"
 
     "@":
-        background:    green
-        foreground:    red
+        background:    body
+        foreground:    eyes
         display:       "@"
     "M":
-        background:    green
-        foreground:    brightgreen
+        background:    body
+        foreground:    skin
         display:       "_"
 
     "/":
         background:    black
-        foreground:    yellow
+        foreground:    bill
         display:       "/"
     "x":
         background:    black
-        foreground:    yellow
+        foreground:    bill
         display:       "\\"
     "(":
         background:    black
-        foreground:    brightgreen
+        foreground:    skin
         display:       "("
     ")":
         background:    black
-        foreground:    brightgreen
+        foreground:    skin
         display:       ")"
     "=":
         background:    black
-        foreground:    yellow
+        foreground:    bill
         display:       "="
     "-":
         background:    black
-        foreground:    yellow
+        foreground:    bill
         display:       "-"
     "~":
         background:    black
-        foreground:    yellow
+        foreground:    bill
         display:       "_"
     ".":
         background:    black
-        foreground:    blue
+        foreground:    tail
         display:       "."
+palette:
+    eyes:   red
+    tail:   blue
+    skin:   lime
+    body:   green
+    bill:   orange
 
 frames:
     - names:    [ F1 ]

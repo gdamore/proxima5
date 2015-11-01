@@ -16,6 +16,7 @@ package main
 
 import (
 	"github.com/gdamore/tcell"
+	"github.com/gdamore/tcell/views"
 	"time"
 )
 
@@ -182,7 +183,7 @@ func (s *Sprite) Update(now time.Time) {
 	}
 }
 
-func (s *Sprite) Draw(view View) {
+func (s *Sprite) Draw(view views.View) {
 
 	frame, ok := s.frames[s.frame]
 	if !ok {

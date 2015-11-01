@@ -19,6 +19,7 @@ import (
 	"time"
 
 	"github.com/gdamore/tcell"
+	"github.com/gdamore/tcell/views"
 )
 
 type Level struct {
@@ -31,7 +32,7 @@ type Level struct {
 	game     *Game
 	layer    int
 	maxlayer int
-	view     *ViewPort
+	view     *views.ViewPort
 	maxtime  time.Duration
 	begin    time.Time
 	expired  bool
@@ -93,13 +94,13 @@ func (l *Level) Update(now time.Time) {
 	}
 }
 
-func (l *Level) SetView(v *ViewPort) {
+func (l *Level) SetView(v *views.ViewPort) {
 	l.view = v
 	v.SetContentSize(l.width, l.height, true)
 	l.manager.SetView(v)
 }
 
-func (l *Level) Draw(v *ViewPort) {
+func (l *Level) Draw(v *views.ViewPort) {
 
 	l.manager.Draw(v)
 }

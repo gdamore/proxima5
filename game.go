@@ -18,6 +18,7 @@ import (
 	"errors"
 	"fmt"
 	"github.com/gdamore/tcell"
+	"github.com/gdamore/tcell/views"
 	"sync"
 	"time"
 )
@@ -34,9 +35,9 @@ type Game struct {
 	errmsg   string
 	quitone  sync.Once
 	level    *Level
-	lview    *ViewPort
-	sview    *ViewPort
-	sbar     *TextBar
+	lview    *views.ViewPort
+	sview    *views.ViewPort
+	sbar     *views.TextBar
 	lives    int
 	gameover bool
 	started  bool
@@ -64,12 +65,12 @@ func (g *Game) Init() error {
 		g.screen.Fini()
 		return errors.New("Cannot find data (did you run rebuild.sh?)")
 	}
-	g.lview = NewViewPort(g.screen, 0, 1, -1, -1)
+	g.lview = views.NewViewPort(g.screen, 0, 1, -1, -1)
 	g.level.SetView(g.lview)
 	g.level.SetGame(g)
 
-	g.sview = NewViewPort(g.screen, 0, 0, -1, 1)
-	g.sbar = NewTextBar()
+	g.sview = views.NewViewPort(g.screen, 0, 0, -1, 1)
+	g.sbar = views.NewTextBar()
 	g.sbar.SetView(g.sview)
 
 	g.quitq = make(chan struct{})

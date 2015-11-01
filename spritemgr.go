@@ -18,6 +18,7 @@ import (
 	"time"
 
 	"github.com/gdamore/tcell"
+	"github.com/gdamore/tcell/views"
 )
 
 type SpriteManager struct {
@@ -25,7 +26,7 @@ type SpriteManager struct {
 	height   int
 	maxlayer int
 	minlayer int
-	view     *ViewPort
+	view     *views.ViewPort
 	sprites  map[int]map[*Sprite]struct{}
 }
 
@@ -85,12 +86,12 @@ func (m *SpriteManager) Update(now time.Time) {
 	})
 }
 
-func (m *SpriteManager) SetView(v *ViewPort) {
+func (m *SpriteManager) SetView(v *views.ViewPort) {
 	m.view = v
 	v.SetContentSize(m.width, m.height, true)
 }
 
-func (m *SpriteManager) Draw(v View) {
+func (m *SpriteManager) Draw(v views.View) {
 
 	v.Clear()
 

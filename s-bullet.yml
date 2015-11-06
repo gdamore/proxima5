@@ -27,12 +27,12 @@ glyphs:
     V:
         background:    black
         foreground:    bullet
-        display:       ":"
+        display:       "•"
 
     H:
         background:    black
         foreground:    bullet
-        display:       "-"
+        display:       "•"
 palette:
     bullet: fuchsia
 

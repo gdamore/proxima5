@@ -22,21 +22,21 @@ glyphs:
     A:
         background:    yellow
         foreground:    yellow
-        display:       "░"
+        display:       "▒"
 
     B:
         background:    orange
         foreground:    yellow
-        display:       "░"
+        display:       "▒"
 
     C:
         background:    orange
         foreground:    red
-        display:       "░"
+        display:       "▒"
     D:
-        background:    orange
+        background:    red
         foreground:    red
-        display:       "█"
+        display:       "▒"
 
 frames:
     - names:    [ F1 ]

@@ -39,4 +39,7 @@ func RegisterFallbacks(screen tcell.Screen) {
 	screen.RegisterRuneFallback('─', "-")
 	screen.RegisterRuneFallback('━', "-")
 	screen.RegisterRuneFallback('═', "=")
+	screen.RegisterRuneFallback('⁐', "O")
+	screen.RegisterRuneFallback('•', "*")
+
 }

@@ -25,7 +25,7 @@ glyphs:
     "#":
         background:    dirt
         foreground:    moss
-        display:       "░"
+        display:       "▒"
 
     "_":
         background:    black

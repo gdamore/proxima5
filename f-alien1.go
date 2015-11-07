@@ -21,9 +21,6 @@ import (
 type alien1 struct {
 	sprite *Sprite
 	level  *Level
-	moved  bool
-	lastx  int
-	lasty  int
 }
 
 func (o *alien1) HandleEvent(ev tcell.Event) bool {
@@ -39,21 +36,25 @@ func (o *alien1) HandleEvent(ev tcell.Event) bool {
 		} else {
 			s.SetFrame("R1")
 		}
-	case *EventSpriteMove:
-		if ev.s != s {
-			return false
-		}
-		o.moved = true
-		o.lastx, o.lasty, _, _ = s.Bounds()
 	case *EventCollision:
 		switch ev.Collider().Layer() {
 		case LayerTerrain, LayerHazard:
-			if o.moved {
-				vx, vy := s.Velocity()
-				s.SetVelocity(-vx, -vy)
-				s.SetPosition(o.lastx, o.lasty)
-				o.moved = false
+			x, y, _, _ := s.Bounds()
+			vx, vy := s.Velocity()
+			vx = -vx
+			vy = -vy
+			s.SetVelocity(vx, vy)
+			if vx < 0 {
+				x--
+			} else if vx > 0 {
+				x++
 			}
+			if vy < 0 {
+				y--
+			} else if vy > 0 {
+				y++
+			}
+			s.SetPosition(x, y)
 		case LayerShot, LayerPlayer:
 			s.Hide()
 			x, y, _, _ := s.Bounds()

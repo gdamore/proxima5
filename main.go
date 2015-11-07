@@ -17,8 +17,8 @@ package main
 import (
 	"flag"
 	"fmt"
-	"log"
 	"io/ioutil"
+	"log"
 	"math/rand"
 	"os"
 	"time"

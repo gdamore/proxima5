@@ -43,6 +43,7 @@ func (o *ship) shoot() {
 	props.PropSetInt("x", x1+(x2-x1)/2)
 	props.PropSetInt("y", y-1)
 	props.PropSetFloat64("vy", vy-o.bspeed)
+	props.PropSetInt("delay", 10)
 	MakeGameObject(o.level, "bullet", props)
 }
 

@@ -58,9 +58,9 @@ func (o *bullet) HandleEvent(ev tcell.Event) bool {
 		switch ev.Collider().Layer() {
 
 		case LayerTerrain, LayerHazard, LayerPlayer, LayerExplosion:
-			// Impact with most solid objects removes the shot.  The
-			// impacted object is responsible for painting any explosive
-			// effect.
+			// Impact with most solid objects removes the shot.
+			// The impacted object is responsible for painting
+			// any explosive effect.
 			o.destroy()
 		}
 	case *EventAlarm:
@@ -78,6 +78,7 @@ func makeBullet(level *Level, props GameObjectProps) error {
 	frame := props.PropString("frame", "V")
 	sname := props.PropString("sprite", "Bullet")
 	life := props.PropInt("lifetime", 2000)
+	delay := props.PropInt("delay", 0)
 	sprite := GetSprite(sname)
 	o := &bullet{sprite: sprite, level: level}
 
@@ -88,7 +89,15 @@ func makeBullet(level *Level, props GameObjectProps) error {
 
 	sprite.SetLayer(LayerShot)
 	sprite.Watch(o)
-	sprite.SetFrame(frame)
+
+	if delay != 0 {
+		d := time.Duration(delay) * time.Millisecond
+		sprite.SetFrame("")
+		sprite.ScheduleFrame(frame, time.Now().Add(d))
+	} else {
+		sprite.SetFrame(frame)
+	}
+
 	sprite.SetPosition(x, y)
 	sprite.SetVelocity(velx, vely)
 	level.AddSprite(sprite)

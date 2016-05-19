@@ -1,4 +1,4 @@
-// Copyright 2015 Garrett D'Amore
+// Copyright 2016 Garrett D'Amore
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use file except in compliance with the License.
@@ -209,9 +209,6 @@ func (o *ship) HandleEvent(ev tcell.Event) bool {
 
 	case *tcell.EventKey:
 		switch ev.Key() {
-		case tcell.KeySpace:
-			o.shoot()
-			return true
 
 		case tcell.KeyLeft:
 			o.thrustLeft()
@@ -231,6 +228,9 @@ func (o *ship) HandleEvent(ev tcell.Event) bool {
 
 		case tcell.KeyRune:
 			switch ev.Rune() {
+			case ' ':
+				o.shoot()
+				return true
 			case 'j', 'J':
 				o.thrustLeft()
 				return true

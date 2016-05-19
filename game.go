@@ -1,4 +1,4 @@
-// Copyright 2015 Garrett D'Amore
+// Copyright 2016 Garrett D'Amore
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use file except in compliance with the License.
@@ -128,9 +128,10 @@ func (g *Game) Draw() {
 	right := ""
 	if g.lives > 5 {
 		right += fmt.Sprintf("%d x ♥", g.lives)
-	}
-	for i := 0; i < g.lives; i++ {
-		right += " ♥"
+	} else {
+		for i := 0; i < g.lives; i++ {
+			right += " ♥"
+		}
 	}
 	right += " "
 

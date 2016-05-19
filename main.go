@@ -1,4 +1,4 @@
-// Copyright 2015 Garrett D'Amore
+// Copyright 2016 Garrett D'Amore
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use file except in compliance with the License.
@@ -24,7 +24,7 @@ import (
 	"time"
 )
 
-const Version = "0.1"
+const Version = "0.2"
 
 // Proxima (Escape from Promixa 5) is a text-oriented game, utilizing
 // Unicode characters and text terminal display capabilties, demonstrating
@@ -56,7 +56,7 @@ func main() {
 		os.Exit(1)
 	}
 	fmt.Printf("Escape from Proxima 5, %s\n", Version)
-	fmt.Printf("Copyright 2015 Garrett D'Amore\n")
+	fmt.Printf("Copyright 2016 Garrett D'Amore\n")
 	fmt.Printf("Licensed under the Apache 2 license.\n")
 	fmt.Printf("See http://www.apache.org/licenses/LICENSE-2.0\n")
 	fmt.Printf("Thanks for playing!\n")

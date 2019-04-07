@@ -22,6 +22,8 @@ import (
 	"math/rand"
 	"os"
 	"time"
+
+	"github.com/gdamore/proxima5"
 )
 
 const Version = "0.2"
@@ -46,7 +48,7 @@ func main() {
 	} else {
 		log.SetOutput(ioutil.Discard)
 	}
-	game := &Game{}
+	game := &proxima5.Game{}
 	if err := game.Init(); err != nil {
 		fmt.Printf("Failed to initialize game: %v\n", err)
 		os.Exit(1)

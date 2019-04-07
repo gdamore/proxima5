@@ -1,29 +1,31 @@
-
-ESCAPE FROM PROXIMA 5
----------------------
+# Escape from Proxima 5
 
 Version 0.1
 
-(For the in-game backstory, see story.txt.)
+## Backstory
 
-To build it:  ./rebuild.sh
+[story.txt](story.txt)
 
-THIS GAME IS A WORK IN PROGRESS; PROBABLY OF LITTLE ACTUAL PLAYABLE VALUE
-OTHER THAN AS A NOVELTY.
+## Building
 
+    make
 
-GAME PLAY VIDEO
----------------
+## Installing
+
+    make install
+
+## Running
+
+    proxima5
+
+## Game play video
 
 If you just want to see gameplay videos, check these out:
 
+* [Video 2, xterm-256color](https://www.youtube.com/watch?v=jNxKTCmY_bQ)
+* [Video 1, Legacy Terminals](https://www.youtube.com/watch?v=DiOPBBM7-Xc)
 
- * [Video 2, xterm-256color](https://www.youtube.com/watch?v=jNxKTCmY_bQ)
- * [Video 1, Legacy Terminals](https://www.youtube.com/watch?v=DiOPBBM7-Xc)
-
-
-More Info
----------
+## More Info
 
 Only a single game level is implemented so far.
 
@@ -59,8 +61,7 @@ the dynamic views and probably also the sprite management code and maybe even
 the full game loop.
 
 
-Reusing Code & Assets
----------------------
+## Reusing Code & Assets
 
 If you want to reuse any of the code or assets here, feel free, per the
 terms of the Apache 2 license.  I would however appreciate an email
@@ -71,4 +72,9 @@ to see what you create!
 There are no special requirements to do so, but if you do use this code,
 I'd appreciate a mention somewhere in your project, with a link back to
 this github repo.
+
+## Final note
+
+This game is a work in progress and is probably of little actual playable value other than as a novelty.
+
 

@@ -1,0 +1,9 @@
+cmd/mkassets/mkassets
+cmd/proxima5/proxima5
+*.o
+*.bak
+*.swp
+*.tmp
+*~
+l-*.go
+s-*.go

@@ -1,5 +1,3 @@
-//+build ignore
-
 // Copyright 2015 Garrett D'Amore
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -27,10 +25,9 @@ import (
 	"os"
 	"strings"
 
+	"github.com/gdamore/proxima5"
 	"gopkg.in/yaml.v2"
 )
-
-var pkg = "main"
 
 // This program builds sprite data as go declarations, loading the data
 // from YAML.
@@ -41,7 +38,7 @@ func die(format string, v ...interface{}) {
 	os.Exit(1)
 }
 
-func validateSprite(iname string, data *SpriteData) {
+func validateSprite(iname string, data *proxima5.SpriteData) {
 	if data.Name == "" {
 		die("%s: Missing name", iname)
 	}
@@ -72,7 +69,7 @@ func validateSprite(iname string, data *SpriteData) {
 	}
 }
 
-func writeSpriteGo(w io.Writer, data *SpriteData) {
+func writeSpriteGo(w io.Writer, data *proxima5.SpriteData, pkg string) {
 	buf := new(bytes.Buffer)
 	zbuf, e := gzip.NewWriterLevel(buf, gzip.BestCompression)
 	if e != nil {
@@ -108,7 +105,7 @@ func writeSpriteGo(w io.Writer, data *SpriteData) {
 	fmt.Fprint(w, "\t})\n}\n")
 }
 
-func validateLevel(iname string, level *LevelData) {
+func validateLevel(iname string, level *proxima5.LevelData) {
 	if level.Name == "" {
 		die("Missing level label")
 	}
@@ -118,7 +115,7 @@ func validateLevel(iname string, level *LevelData) {
 	}
 }
 
-func writeLevelGo(w io.Writer, level *LevelData) {
+func writeLevelGo(w io.Writer, level *proxima5.LevelData, pkg string) {
 
 	buf := new(bytes.Buffer)
 	zbuf, e := gzip.NewWriterLevel(buf, gzip.BestCompression)
@@ -156,15 +153,14 @@ func writeLevelGo(w io.Writer, level *LevelData) {
 }
 
 func main() {
+	var (
+		inf                       *os.File
+		e                         error
+		asset, oname, format, pkg string
+	)
 
-	var inf *os.File
-	var e error
-	var asset string = "sprite"
-	var oname string = ""
-	var format string = "go"
-
-	flag.StringVar(&asset, "type", asset, "asset type [sprite|level]")
-	flag.StringVar(&pkg, "pkg", pkg, "package name")
+	flag.StringVar(&asset, "type", "sprite", "asset type [sprite|level]")
+	flag.StringVar(&pkg, "pkg", "proxima5", "package name")
 	flag.StringVar(&oname, "out", "", "output file name")
 	flag.StringVar(&format, "format", "go", "output format [go|gob]")
 
@@ -172,8 +168,8 @@ func main() {
 
 	for _, arg := range flag.Args() {
 
-		data := &SpriteData{}
-		level := &LevelData{}
+		data := &proxima5.SpriteData{}
+		level := &proxima5.LevelData{}
 
 		iname := arg
 		if inf, e = os.Open(iname); e != nil {
@@ -203,14 +199,14 @@ func main() {
 				die("%s: YAML error: %v", iname, err)
 			}
 			validateSprite(iname, data)
-			writeSpriteGo(buf, data)
+			writeSpriteGo(buf, data, pkg)
 
 		case "level":
 			if err := yaml.Unmarshal(all, &level); err != nil {
 				die("%s: YAML error: %v", iname, err)
 			}
 			validateLevel(iname, level)
-			writeLevelGo(buf, level)
+			writeLevelGo(buf, level, pkg)
 
 		default:
 			panic("unknown asset class")

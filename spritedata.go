@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package main
+package proxima5
 
 type SpriteGlyph struct {
 	Display    string // What is displayed, can be Unicode

@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package main
+package proxima5
 
 const (
 	LayerBackdrop  = 0 // Any backdrop (will we have?)

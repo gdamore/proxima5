@@ -1,27 +1,7 @@
-#binaries
+#proxima5 binaries
 mkassets
 proxima5
 
-#generated assets
-l-level1.go
-s-alien1.go
-s-blastwave.go
-s-bullet.go
-s-cavern1.go
-s-complete.go
-s-exhaust.go
-s-explosion.go
-s-gameover.go
-s-gantry.go
-s-hfence.go
-s-pad.go
-s-press.go
-s-ship.go
-s-smexplosion.go
-s-thrust.go
-s-tinyexplosion.go
-
-#default golang git ignore
 # Binaries for programs and plugins
 *.exe
 *.exe~

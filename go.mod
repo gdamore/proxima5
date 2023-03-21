@@ -10,5 +10,4 @@ require (
 	github.com/mattn/go-runewidth v0.0.7 // indirect
 	golang.org/x/sys v0.0.0-20190626150813-e07cf5db2756 // indirect
 	golang.org/x/text v0.3.0 // indirect
-	gopkg.in/yaml.v2 v2.4.0 // indirect
 )

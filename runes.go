@@ -15,7 +15,7 @@
 package main
 
 import (
-	"github.com/gdamore/tcell"
+	"github.com/gdamore/tcell/v2"
 )
 
 // RegisterFallbacks registers the UTF-8 runes we use in this game with

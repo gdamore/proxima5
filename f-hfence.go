@@ -17,7 +17,7 @@ package main
 import (
 	"time"
 
-	"github.com/gdamore/tcell"
+	"github.com/gdamore/tcell/v2"
 )
 
 type hfence struct {

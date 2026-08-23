@@ -17,7 +17,7 @@ package main
 import (
 	"time"
 
-	"github.com/gdamore/tcell"
+	"github.com/gdamore/tcell/v3"
 )
 
 type ship struct {
@@ -227,20 +227,20 @@ func (o *ship) HandleEvent(ev tcell.Event) bool {
 			return true
 
 		case tcell.KeyRune:
-			switch ev.Rune() {
-			case ' ':
+			switch ev.Str() {
+			case " ":
 				o.shoot()
 				return true
-			case 'j', 'J':
+			case "j", "J":
 				o.thrustLeft()
 				return true
-			case 'k', 'K':
+			case "k", "K":
 				o.thrustRight()
 				return true
-			case 'i', 'I':
+			case "i", "I":
 				o.thrustUp()
 				return true
-			case 'm', 'M':
+			case "m", "M":
 				o.thrustDown()
 				return true
 			}

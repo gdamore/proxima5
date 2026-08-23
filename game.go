@@ -17,8 +17,8 @@ package main
 import (
 	"errors"
 	"fmt"
-	"github.com/gdamore/tcell"
-	"github.com/gdamore/tcell/views"
+	"github.com/gdamore/proxima5/internal/views"
+	"github.com/gdamore/tcell/v3"
 	"sync"
 	"time"
 )
@@ -159,9 +159,16 @@ loop:
 		}
 	}
 
-	// Inject a wakeup interrupt
-	iev := tcell.NewEventInterrupt(nil)
-	g.screen.PostEvent(iev)
+	// Inject a wakeup interrupt.
+	//
+	// v3 has no PostEvent: the event queue is an ordinary channel it documents
+	// as writable. The send does not block, because this runs on the way to Fini
+	// and a full queue means the reader has already stopped -- which is the thing
+	// the wakeup was for.
+	select {
+	case g.screen.EventQ() <- tcell.NewEventInterrupt(nil):
+	default:
+	}
 
 	g.screen.Fini()
 	// wait for updaters to finish
@@ -240,8 +247,10 @@ func (g *Game) EventPoller() {
 			return
 		default:
 		}
-		ev := g.screen.PollEvent()
-		if ev == nil {
+		// v3 has no PollEvent: the queue is read directly, and tcell closes it
+		// when the screen is finalised, which is what a nil event used to mean.
+		ev, ok := <-g.screen.EventQ()
+		if !ok || ev == nil {
 			return
 		}
 		select {

@@ -15,8 +15,8 @@
 package main
 
 import (
-	"github.com/gdamore/tcell"
-	"github.com/gdamore/tcell/views"
+	"github.com/gdamore/proxima5/internal/views"
+	"github.com/gdamore/tcell/v3"
 	"time"
 )
 

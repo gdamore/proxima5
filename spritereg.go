@@ -22,7 +22,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/gdamore/tcell"
+	"github.com/gdamore/tcell/v3"
 )
 
 var spriteData map[string]*SpriteData

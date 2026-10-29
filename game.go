@@ -155,7 +155,11 @@ loop:
 			break loop
 		case <-time.After(time.Millisecond * 10):
 		case ev := <-g.eventq:
+			// Hold the lock the updater holds, since the ship a key moves is
+			// the ship the updater collides.
+			g.Lock()
 			g.HandleEvent(ev)
+			g.Unlock()
 		}
 	}
 
